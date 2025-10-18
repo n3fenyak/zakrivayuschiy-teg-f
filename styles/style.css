@@ -10,7 +10,136 @@
 
 */
 
+/* импортирую стили*/
+@import url(./header.css);
+@import url(./buttons.css);
+
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font, sans-serif);
+  font-weight: var(--main-font-weight, 410);
+  background-image: var(--gradient-bg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  max-inline-size: var(--container-width);
+  margin: 0 auto;
+}
+
+.main {
+  margin-top: 98px;
+}
+
+.card {
+  border: 2px solid #000;
+  margin-bottom: 50px;
+}
+
+.card__container-title {
+  display: flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 4px 10px;
+  background-color: #fff;
+}
+
+.card__title {
+  font-family: var(--main-font);
+  font-weight: var(--title-font-weight);
+  font-size: 18px;
+  line-height: 1;
+}
+
+.card__container-img {
+  height: 100%;
+  position: relative;
+}
+
+.card-img {
+  aspect-ratio: 1 / 1;
+  width: clamp(371px, 100%, 696px);
+  display: block;
+  object-fit: cover;
+  object-position: top right;
+}
+
+.card-img-tag {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-family: var(--accent-font);
+  color: #fff;
+  font-size: 14px;
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+  text-transform: uppercase;
+}
+
+@supports (-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff) {
+  .card-img-tag {
+    color: transparent;
+    text-shadow: none;
+    -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px #fff;
+  }
+}
+
+.card__container-footer {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  gap: 25px;
+  background-color: #fff;
+  border-top: 2px solid var(--contour-color)
+}
+
+.card__text {
+  font-weight: var(--main-font-weight);
+}
+
+.sepia {
+  filter: sepia(80%);
+}
+
+.saturate {
+  filter: saturate(300%);
+}
+
+.hue-rotate {
+  filter: hue-rotate(30deg);
+}
+
+.invert {
+  filter: invert(0.7);
+}
+
+.grayscale {
+  filter: grayscale(0.8);
+}
+
+.blur {
+  filter: blur(0.7em);
+}
+
+.contrast {
+  filter: contrast(50%) hue-rotate(80deg);
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.contour {
+  transition: fill 0.1s linear 0s;
+}
+
+.core {
+  transition: fill 0.3s linear 0.03s;
+}
+
+.main-body {
+  transition: fill 0.3s linear 0s;
 }

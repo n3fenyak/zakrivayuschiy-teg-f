@@ -1,0 +1,87 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 38px;
+  background-color: #fff;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  border: 2px solid var(--contour-color);
+  transition: box-shadow 0.5s ease;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 1;
+  mix-blend-mode: difference;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 0 var(--contour-color);
+}
+
+.button:hover.button::after {
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(0);
+}
+
+.button svg {
+  fill: var(--contour-color);
+  inline-size: 22px;
+  block-size: 22px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.button__text {
+  line-height: 0.9;
+  font-weight: 400;
+}
+
+.card__container-button {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+}
+
+.card__icon-button {
+  min-height: 38px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin-right: 12px;
+  transition: border 0.5s ease;
+  cursor: pointer;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--contour-color);
+}
+
+.card__like-button {
+  width: 130px;
+  height: 38px;
+  background-color: transparent;
+}
+
+.save-button {
+  margin: 50px auto 50px;
+  padding: 17px 20px;
+}
