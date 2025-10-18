@@ -13,6 +13,14 @@
 /* импортирую стили*/
 @import url(./header.css);
 @import url(./buttons.css);
+@import url(./dialog.css);
+
+@supports (font-variation-settings: normal) {
+  .page {
+    font-family: var(--main-font, "Inter-Variable"), sans-serif;
+    font-variation-settings: "wght" var(--main-font-weight, 410);
+  }
+}
 
 .page {
   min-inline-size: 320px;

@@ -1,0 +1,46 @@
+.dialog {
+  position: fixed;
+  inset: 0;
+  padding: 0;
+}
+
+.dialog::backdrop {
+  background-color: var(--contour-color);
+  opacity: 0.7;
+}
+
+.dialog__wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  max-width: 353px;
+  gap: 30px;
+  padding: 30px;
+}
+
+.dialog__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.dialog__text {
+  font-size: 14px;
+  font-family: var(--accent-font);
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 234px;
+  text-transform: uppercase;
+}
+
+.dialog__wrapper .button {
+  text-transform: uppercase;
+  justify-content: center;
+  max-width: 293px;
+}
+
+.dialog__inner svg {
+  width: 21px;
+  height: 21px;
+}
