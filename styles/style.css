@@ -49,7 +49,7 @@
 .card__container-title {
   display: flex;
   align-items: center;
-  min-height: 30px;
+  /* min-height: 30px; */
   padding: 4px 10px;
   background-color: #fff;
 }
@@ -84,6 +84,7 @@
   opacity: 0.5;
   mix-blend-mode: hard-light;
   text-transform: uppercase;
+  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
 }
 
 @supports (-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff) {
@@ -91,6 +92,7 @@
     color: transparent;
     text-shadow: none;
     -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px 0 #fff;
   }
 }
 

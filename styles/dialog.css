@@ -6,7 +6,7 @@
 
 .dialog::backdrop {
   background-color: var(--contour-color);
-  opacity: 0.7;
+  opacity: 0.75;
 }
 
 .dialog__wrapper {
