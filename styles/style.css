@@ -15,10 +15,23 @@
 @import url(./buttons.css);
 @import url(./dialog.css);
 
+
+@supports (-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff) {
+  .card-img-tag {
+    color: transparent;
+    text-shadow: none;
+    -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px 0 #fff;
+  }
+}
+
 @supports (font-variation-settings: normal) {
   .page {
-    font-family: var(--main-font, "Inter-Variable"), sans-serif;
     font-variation-settings: "wght" var(--main-font-weight, 410);
+  }
+
+  .card__container-title {
+    font-variation-settings: 'wght' var(--title-font-weight, 715);
   }
 }
 
@@ -30,6 +43,7 @@
   background-image: var(--gradient-bg);
   background-size: cover;
   background-attachment: fixed;
+  font-size: 18px;
 }
 
 .container {
@@ -38,20 +52,27 @@
 }
 
 .main {
-  margin-top: 98px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  gap: 50px;
+  padding-block-start: 100px;
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   border: 2px solid #000;
-  margin-bottom: 50px;
+
 }
 
 .card__container-title {
   display: flex;
   align-items: center;
   /* min-height: 30px; */
-  padding: 4px 10px;
+  padding: 6px 10px;
   background-color: #fff;
+  font-weight: 700;
 }
 
 .card__title {
@@ -62,7 +83,7 @@
 }
 
 .card__container-img {
-  height: 100%;
+  /* height: 100%; */
   position: relative;
 }
 
@@ -72,6 +93,7 @@
   display: block;
   object-fit: cover;
   object-position: top right;
+  inline-size: 100%;
 }
 
 .card-img-tag {
@@ -87,26 +109,19 @@
   text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
 }
 
-@supports (-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff) {
-  .card-img-tag {
-    color: transparent;
-    text-shadow: none;
-    -webkit-text-stroke: 1px #fff;
-    text-stroke: 1px 0 #fff;
-  }
-}
-
 .card__container-footer {
   display: flex;
   flex-direction: column;
   padding: 25px;
   gap: 25px;
+  padding-inline: 27px;
   background-color: #fff;
   border-top: 2px solid var(--contour-color)
 }
 
 .card__text {
   font-weight: var(--main-font-weight);
+  line-height: 21px;
 }
 
 .sepia {
@@ -161,28 +176,34 @@ floppy-icon {
 }
 
 @media (width <=375px) {
-  .main {
-    margin-top: 100px;
-  }
 
   .card__footer {
     padding-top: 27px;
+  }
+
+  .card__container-title {
+    padding: 6.5px 10px;
   }
 
   .card__container-img {
     height: 371px;
   }
 
+  .card__container-footer {
+    padding: 25px;
+    gap: 25px;
+    padding-inline: 25px;
+  }
+
   .button {
-    gap: 13px;
+    gap: 11px;
     flex-direction: column;
   }
 
-  .floppy-icon {
-    display: block;
-    width: 30px;
-    height: 30px;
-  }
+  /* .save-button {
+    margin: 20px auto 0;
+    padding: 12px 18px;
+  } */
 
   .dialog__wrapper {
     padding-left: 40px;

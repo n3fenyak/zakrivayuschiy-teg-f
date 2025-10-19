@@ -41,6 +41,7 @@
 }
 
 .dialog__inner svg {
-  width: 21px;
-  height: 21px;
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
 }

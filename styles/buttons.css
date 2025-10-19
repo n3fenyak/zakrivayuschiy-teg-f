@@ -38,8 +38,8 @@
 
 .button svg {
   fill: var(--contour-color);
-  inline-size: 22px;
-  block-size: 22px;
+  inline-size: 28px;
+  block-size: 28px;
   object-fit: cover;
   object-position: center;
   display: block;
@@ -54,19 +54,23 @@
   align-self: flex-end;
   display: flex;
   align-items: center;
+  position: relative;
 }
+
 
 .card__icon-button {
   min-height: 38px;
   background-color: transparent;
   border: 2px solid transparent;
   display: flex;
+  padding-inline: 0;
+  padding-block: 0;
   align-items: center;
   justify-content: center;
   padding: 0;
-  margin-right: 12px;
   transition: border 0.5s ease;
   cursor: pointer;
+
 }
 
 .card__icon-button:focus {
@@ -84,6 +88,6 @@
 }
 
 .save-button {
-  margin: 50px auto 50px;
-  padding: 17px 20px;
+  margin: 0 auto;
+  padding: 10px 16px;
 }
