@@ -30,7 +30,8 @@
   font-family: var(--accent-font);
   font-weight: 400;
   line-height: 1.5;
-  max-width: 234px;
+  /* padding-inline: 40px; */
+  /* max-inline-size: 336px; */
   text-transform: uppercase;
 }
 

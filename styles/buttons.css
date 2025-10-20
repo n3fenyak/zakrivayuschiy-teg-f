@@ -38,8 +38,8 @@
 
 .button svg {
   fill: var(--contour-color);
-  inline-size: 28px;
-  block-size: 28px;
+  inline-size: 21px;
+  block-size: 21px;
   object-fit: cover;
   object-position: center;
   display: block;
@@ -55,6 +55,7 @@
   display: flex;
   align-items: center;
   position: relative;
+  gap: 4px;
 }
 
 
@@ -89,5 +90,5 @@
 
 .save-button {
   margin: 0 auto;
-  padding: 10px 16px;
+  padding: 14px 16px;
 }

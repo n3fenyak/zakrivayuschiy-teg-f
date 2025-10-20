@@ -57,6 +57,7 @@
   align-content: center;
   gap: 50px;
   padding-block-start: 100px;
+  margin-bottom: 100px;
 }
 
 .card {
@@ -205,8 +206,9 @@ floppy-icon {
     padding: 12px 18px;
   } */
 
-  .dialog__wrapper {
+  /* .dialog__wrapper {
     padding-left: 40px;
     padding-right: 40px;
-  }
+  } */
+
 }
